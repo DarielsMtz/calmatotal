@@ -27,7 +27,10 @@
   --color-azul-claro: #add8e6;
   --color-azul-oscuro: #0a1c22;
   --color-gris-suave: #d3d3d3;
+  --color-gris-claro: #d3d3d321;
   --color-rojo-claro: #ff5f5f;
+  --color-verde-menta: #1c475f;
+  --color-verde-claro: #98fb98;
 
   /* Tamaños Fuente */
   --tam-h1: 1.8em;
@@ -42,3 +45,213 @@
 /* *********************************** */
 /* *** ESTILOS GENERALES *** */
 /* *********************************** */
+
+html {
+  font-family: "Raleway", sans-serif;
+  font-size: 1rem;
+  color: var(--color-gris-suave);
+}
+
+body {
+  /* Evitar el desbordamiento vertical */
+
+  /* Estilos genericos */
+  #container,
+  #container__inicio {
+    width: clamp(320px, 100%);
+    height: 100vh;
+    background: var(--color-azul-oscuro);
+    user-select: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  /* Aparatado del Contenedor del Index */
+  #container {
+    /* Contenido */
+    & .main__portada {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 100px;
+
+      & .main__portada__img {
+        width: 25%;
+        filter: drop-shadow(0px 0px 15px #0a1c22);
+      }
+
+      /* Titulo Comienzo */
+      .main__portada__titulo {
+        font-family: "Raleway03", sans-serif;
+        font-size: clamp(var(--tam-h6), 5vw, 2em);
+        color: var(--color-gris-suave);
+        text-align: center;
+        filter: drop-shadow(0px 0px 15px #0a1c22);
+      }
+
+      /* Boton Empezar */
+      & .main__portada__boton {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: #ffffff03;
+        border-radius: 10px;
+        padding-bottom: 10px;
+        backdrop-filter: blur(29px);
+
+        & a {
+          position: relative;
+          width: fit-content;
+          font-family: "Raleway-Bold", Helvetica;
+          color: var(--color-gris-suave);
+          text-decoration: none;
+          font-size: 1.5rem;
+          padding: 10px 60px;
+
+          & ::hover {
+            border: 1px solid var(--color-gris-suave);
+          }
+        }
+
+        & .flecha {
+          position: relative;
+          width: 20px;
+          height: 15px;
+          transform: rotate(90deg);
+          z-index: 10;
+        }
+      }
+    }
+
+    /* Retina Display */
+    /* Móvil */
+    @media only screen and (min-width: 320px) and (max-width: 500px) and (orientation: portrait) {
+      @media (-webkit-min-device-pixel-ratio: 1) {
+        background: url(../img/smartphone/Img_fondo.webp),
+          linear-gradient(
+            0deg,
+            rgba(10, 28, 34, 0.56) 1.39%,
+            rgba(217, 217, 217, 0) 75.64%
+          );
+      }
+
+      @media (-webkit-min-device-pixel-ratio: 2) {
+        background: url(../img/smartphone/Img_fondo@2x.webp),
+          linear-gradient(
+            0deg,
+            rgba(10, 28, 34, 0.56) 1.39%,
+            rgba(217, 217, 217, 0) 75.64%
+          );
+      }
+
+      @media (-webkit-min-device-pixel-ratio: 3) {
+        background: url(../img/smartphone/Img_fondo@3x.webp),
+          linear-gradient(
+            0deg,
+            rgba(10, 28, 34, 0.56) 1.39%,
+            rgba(217, 217, 217, 0) 75.64%
+          );
+      }
+    }
+
+    /* Animación push up al cambiar de página */
+    .container.push-up {
+      transform: translateY(-100%);
+    }
+  }
+
+  #container__inicio {
+    /* Apartado de las cartas */
+
+    /* Carta 01 */
+    .main__carta01 {
+      width: 300px;
+      height: 340px;
+      border-radius: 26px;
+      background-color: var(--color-verde-menta);
+      box-shadow: 0px 0px 15.12px 0px rgba(239, 239, 250, 0.1);
+      margin-bottom: 50px;
+
+      /* Apartado de header de la carta */
+      & .main__carta01-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+
+        /* Parte del titulo */
+        & .main__carta01-header-tag {
+          background-color: var(--color-gris-claro);
+          width: fit-content;
+          padding: 0px 5px;
+          border-radius: 15px;
+
+          &::before {
+            content: "";
+            background: url("../svg/verificado.svg") no-repeat;
+            background-size: 16px 16px;
+            vertical-align: auto;
+            border-color: var(--color-verde-claro);
+
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            margin: 5px 0px 0px 0px;
+          }
+        }
+      }
+
+      /* Apartado del centro de la carta */
+      & .main__carta01-centro {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 40px;
+        background-color: var(--color-gris-claro);
+        width: fit-content;
+        margin: auto;
+        border-radius: 50%;
+      }
+
+      /* Parte del titulo  */
+      & .main__carta01-titulo {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: left;
+        padding: 0 20px;
+
+        /* Primero */
+        & h6:first-child {
+          font-size: var(--tam-h3);
+        }
+      }
+
+      /* Apartado del boton de la carta */
+      & .main__carta01-enlace {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+
+        /* Parte del enlace */
+        & a {
+          text-decoration: none;
+          color: var(--color-azul-oscuro);
+          font-size: var(--tam-h3);
+          font-family: "Raleway03", sans-serif;
+          text-transform: uppercase;
+          background-color: var(--color-gris-suave);
+          padding: 5px 100px;
+          border-radius: 10px;
+        }
+      }
+    }
+
+    /* Carta 02 */
+  }
+}

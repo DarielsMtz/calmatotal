@@ -47,31 +47,73 @@
     <script src="preloader.js"></script>
   </head>
   <body>
-    <div id="container">
+    <div id="container__inicio">
       <!-- *** ESTRUCTURA SEMÁNTICA *** -->
       <!-- Main (centro de la página, zona central) -->
       <main>
-        <!-- section y article (posibilidades dentro de main) -->
-        <figure class="main__portada">
-          <!-- Contenido a encapsular (por ejemplo, una imagen) -->
-          <img
-            class="main__portada__img"
-            src="svg/Logo.svg"
-            alt="Logotipo ClamaTotal" />
+        <!-- Apartado de las carta des opciones -->
+        <!-- Carta 01 -->
+        <section class="main__carta01">
+          <header class="main__carta01-header">
+            <span class="main__carta01-header-tag">Recomendado</span>
+            <img src="svg/exclamacion.svg" alt="icono de exclamacion" />
+          </header>
 
-          <!-- Leyenda o descripción del contenido -->
-          <figcaption class="main__portada__titulo">
-            <p>¡Bienvenido!</p>
-            <p>Encuentra paz en cada respiración.</p>
-            <p>¡Comencemos juntos!</p>
-          </figcaption>
+          <article class="main__carta01-centro">
+            <img src="svg/Relax.svg" alt="icono de Relax" />
+          </article>
 
-          <!-- Apartado del boton-->
-          <section class="main__portada__boton">
-            <a href="/inicio.html" class=".enlace"> Empezar</a>
-            <img class="flecha" src="svg/Flecha.svg" />
-          </section>
-        </figure>
+          <article class="main__carta01-titulo">
+            <h6>Relax</h6>
+            <h6>Ejercicio - 5min</h6>
+          </article>
+
+          <span class="main__carta01-enlace">
+            <a href="">Iniciar</a>
+          </span>
+        </section>
+
+        <!-- Carta 02 -->
+        <section class="main__carta01">
+          <header class="main__carta01-header">
+            <span class="main__carta01-header-tag">Recomendado</span>
+            <img src="svg/exclamacion.svg" alt="icono de exclamacion" />
+          </header>
+
+          <article class="main__carta01-centro">
+            <img src="svg/Relax.svg" alt="icono de Relax" />
+          </article>
+
+          <article class="main__carta01-titulo">
+            <h6>Relax</h6>
+            <h6>Ejercicio - 5min</h6>
+          </article>
+
+          <span class="main__carta01-enlace">
+            <a href="">Iniciar</a>
+          </span>
+        </section>
+
+        <!-- Carta 03 -->
+        <section class="main__carta01">
+          <header class="main__carta01-header">
+            <span class="main__carta01-header-tag">Recomendado</span>
+            <img src="svg/exclamacion.svg" alt="icono de exclamacion" />
+          </header>
+
+          <article class="main__carta01-centro">
+            <img src="svg/Relax.svg" alt="icono de Relax" />
+          </article>
+
+          <article class="main__carta01-titulo">
+            <h6>Relax</h6>
+            <h6>Ejercicio - 5min</h6>
+          </article>
+
+          <span class="main__carta01-enlace">
+            <a href="">Iniciar</a>
+          </span>
+        </section>
       </main>
       <!-- Footer (final de la página, zona inferior) -->
       <footer>
@@ -79,5 +121,4 @@
       </footer>
     </div>
   </body>
-  <script src="js/main.js"></script>
 </html>
