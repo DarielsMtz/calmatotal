@@ -2,18 +2,43 @@
 @import url(normalize.min.css);
 @import url(reset.css);
 
+/* Tipografía */
+@font-face {
+  font-family: "Raleway";
+  src: url("../font/Raleway-Regular.woff2") format("woff2"),
+    url("../font/Raleway-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Raleway02";
+  src: url("../font/Raleway-Italic.woff2") format("woff2"),
+    url("../font/Raleway-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Raleway03";
+  src: url("../font/Raleway-Bold.woff2") format("woff2"),
+    url("../font/Raleway-Bold.woff") format("woff");
+}
+
+/* Variables */
+:root {
+  /* Colores */
+  --color-azul-claro: #add8e6;
+  --color-azul-oscuro: #0a1c22;
+  --color-gris-suave: #d3d3d3;
+  --color-rojo-claro: #ff5f5f;
+
+  /* Tamaños Fuente */
+  --tam-h1: 1.8em;
+  --tam-h2: 1.4em;
+  --tam-h3: 1.2em;
+  --tam-h4: 1em;
+  --tam-h5: 0.75em;
+  --tam-h6: 0.5em;
+  --tam-p: 1em;
+}
+
 /* *********************************** */
 /* *** ESTILOS GENERALES *** */
 /* *********************************** */
-
-/* Tipografía */
-@font-face {
-  font-family: "";
-  src: url("") format("woff2"), url("") format("woff");
-}
-
-/* ******************************** */
-
-/* Colores */
-
-/* ******************************** */
