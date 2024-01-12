@@ -42,6 +42,18 @@
   --tam-p: 1em;
 }
 
+/* Animacion */
+@keyframes show {
+  from {
+    opacity: 0;
+    scale: 30%;
+  }
+  to {
+    opacity: 1;
+    scale: 100%;
+  }
+}
+
 /* *********************************** */
 /* *** ESTILOS GENERALES *** */
 /* *********************************** */
@@ -50,21 +62,23 @@ html {
   font-family: "Raleway", sans-serif;
   font-size: 1rem;
   color: var(--color-gris-suave);
+  /* scroll-behavior: smooth; */
 }
 
 body {
   /* Evitar el desbordamiento vertical */
+  overflow-x: hidden;
 
   /* Estilos genericos */
   #container,
   #container__inicio {
     width: clamp(320px, 100%);
-    height: 100vh;
+    /* height: 100vh; */
     background: var(--color-azul-oscuro);
     user-select: none;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
   }
 
@@ -165,29 +179,43 @@ body {
   }
 
   #container__inicio {
-    /* Apartado de las cartas */
+    padding: 80px 0px;
 
+    /* Apartado de las cartas */
     /* Carta 01 */
-    .main__carta01 {
+    .main__carta01,
+    .main__carta02,
+    .main__carta03 {
       width: 300px;
       height: 340px;
       border-radius: 26px;
       background-color: var(--color-verde-menta);
       box-shadow: 0px 0px 15.12px 0px rgba(239, 239, 250, 0.1);
-      margin-bottom: 50px;
+      margin-bottom: 40px;
+
+      /* Parte de la animación */
+      view-timeline: --image;
+      view-timeline-axis: block;
+      animation-timeline: --image;
+      animation-name: show;
+      animation-range: entry 25% cover 28%;
+      animation-fill-mode: both;
 
       /* Apartado de header de la carta */
-      & .main__carta01-header {
+      & .main__carta01-header,
+      .main__carta02-header {
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding: 20px;
 
         /* Parte del titulo */
-        & .main__carta01-header-tag {
+        & .main__carta01-header-tag,
+        .main__carta02-header-tag,
+        .main__carta03-header-tag {
           background-color: var(--color-gris-claro);
           width: fit-content;
-          padding: 0px 5px;
+          padding: 0px 8px;
           border-radius: 15px;
 
           &::before {
@@ -206,7 +234,9 @@ body {
       }
 
       /* Apartado del centro de la carta */
-      & .main__carta01-centro {
+      & .main__carta01-centro,
+      .main__carta02-centro,
+      .main__carta03-centro {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -218,7 +248,9 @@ body {
       }
 
       /* Parte del titulo  */
-      & .main__carta01-titulo {
+      & .main__carta01-titulo,
+      .main__carta02-titulo,
+      .main__carta03-titulo {
         display: flex;
         justify-content: space-between;
         flex-direction: column;
@@ -232,7 +264,9 @@ body {
       }
 
       /* Apartado del boton de la carta */
-      & .main__carta01-enlace {
+      & .main__carta01-enlace,
+      .main__carta02-enlace,
+      .main__carta03-enlace {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -253,5 +287,16 @@ body {
     }
 
     /* Carta 02 */
+    .main__carta02 {
+      background: rgba(173, 216, 230, 0.43);
+
+      /* & .main__carta01-header-tag::before {
+        content: none;
+      } */
+    }
+    /* Carta 03 */
+    .main__carta03 {
+      background: rgba(152, 251, 152, 0.36);
+    }
   }
 }
