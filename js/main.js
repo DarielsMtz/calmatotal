@@ -18,17 +18,10 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-  var verMasLink = document.getElementById("verMasLink");
-
-  verMasLink.addEventListener("click", function (event) {
-    event.preventDefault(); // Evita el comportamiento predeterminado del enlace
-
-    // Desplaza el documento al inicio (0 en x, 0 en y) durante 800 milisegundos
-    window.scrollTo({
-      top: 0,
-      left: 0,
-      behavior: "smooth",
-    });
+document
+  .getElementById("vermas-section")
+  .addEventListener("click", function () {
+    document.getElementById("hiddenContent").style.transform = "translateY(0)";
+    document.getElementById("vermas-section").style.transform =
+      "translateY(-100%)";
   });
-});
