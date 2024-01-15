@@ -30,6 +30,7 @@
   --color-gris-claro: #d3d3d321;
   --color-rojo-claro: #ff5f5f;
   --color-verde-menta: #1c475f;
+  --color-verde-semioscuro: #11313b;
   --color-verde-claro: #98fb98;
 
   /* Tamaños Fuente */
@@ -56,6 +57,19 @@
   to {
     opacity: 1;
     scale: 100%;
+  }
+}
+
+/* Animacion de pulso */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
   }
 }
 
@@ -360,32 +374,75 @@ html {
 
 /* Apartado de la pagina ejercicio_01 */
 #container__ejercicio01 {
-  .outer-circle {
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    background-color: var(--color-verde-menta);
-    position: relative;
+  /* Felcha de retorno */
+  & .container__ejercicio01-volver {
+    & :is(img) {
+      width: 40px;
+      height: 25px;
+      transform: rotate(180deg);
+      margin: 60px 0;
+    }
   }
 
-  .inner-circle {
-    width: 200px;
-    height: 200px;
+  /* Apartado del circulo central */
+  .container__ejercicio01-grafico-circulo-externo {
+    width: 300px;
+    height: 300px;
+    margin: 100px 0;
     border-radius: 50%;
-    background-color: var(--color-azul-oscuro);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    background-color: var(--color-verde-semioscuro);
+    box-shadow: 0px 0px 60px 0px rgba(239, 239, 250, 0.15);
+    position: relative;
+    /* Animacion */
+    animation: pulse 5s infinite ease-in-out;
+
+    .container__ejercicio01-grafico-circulo-externo02 {
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      background-color: #153847;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      .container__ejercicio01-grafico-circulo-externo03 {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background-color: #184053;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        .container__ejercicio01-grafico-circulo-centro {
+          width: 150px;
+          height: 150px;
+          border-radius: 50%;
+          background-color: #1c475f;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: var(--tam-h1);
+          text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.42);
+
+          &::before {
+            content: "Iniciar";
+          }
+        }
+      }
+    }
   }
-  .inner__inner-circule {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    background-color: var(--color-azul-claro);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+
+  /* Apartado de Ver Más */
+  .container__ejercicio01-info {
+    max-width: 300px;
+    overflow: hidden;
   }
 }
