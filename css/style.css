@@ -70,293 +70,322 @@ html {
   background: var(--color-azul-oscuro);
 }
 
-body {
-  /* Estilos genericos */
-  #container,
-  #container__inicio {
-    width: max-width(320px, 100%);
-    height: 100vh;
+/* Estilos genericos */
+#container,
+#container__inicio,
+#container__ejercicio01 {
+  width: max-width(320px, 100%);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* Aparatado del Contenedor del Index */
+#container {
+  /* Contenido */
+  & .main__portada {
     display: flex;
+
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-  }
+    gap: 80px;
 
-  /* Aparatado del Contenedor del Index */
-  #container {
-    /* Contenido */
-    & .main__portada {
-      display: flex;
+    & .main__portada__img {
+      width: 25%;
+      filter: drop-shadow(0px 0px 15px #0a1c22);
+    }
 
+    /* Titulo Comienzo */
+    .main__portada__titulo {
+      font-family: "Raleway03", sans-serif;
+      font-size: clamp(var(--tam-h6), 5vw, 2em);
+      color: var(--color-gris-suave);
+      text-align: center;
+      filter: drop-shadow(0px 0px 15px #0a1c22);
+    }
+
+    /* Boton Empezar */
+    & .main__portada__boton {
+      display: inline-flex;
       flex-direction: column;
-      justify-content: center;
       align-items: center;
-      gap: 80px;
+      justify-content: center;
+      background-color: #ffffff03;
+      border-radius: 10px;
+      padding-bottom: 10px;
+      backdrop-filter: blur(29px);
 
-      & .main__portada__img {
-        width: 25%;
-        filter: drop-shadow(0px 0px 15px #0a1c22);
-      }
-
-      /* Titulo Comienzo */
-      .main__portada__titulo {
-        font-family: "Raleway03", sans-serif;
-        font-size: clamp(var(--tam-h6), 5vw, 2em);
+      & a {
+        position: relative;
+        width: fit-content;
+        font-family: "Raleway-Bold", Helvetica;
         color: var(--color-gris-suave);
-        text-align: center;
-        filter: drop-shadow(0px 0px 15px #0a1c22);
-      }
+        text-decoration: none;
+        font-size: 1.5rem;
+        padding: 10px 60px;
 
-      /* Boton Empezar */
-      & .main__portada__boton {
-        display: inline-flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        background-color: #ffffff03;
-        border-radius: 10px;
-        padding-bottom: 10px;
-        backdrop-filter: blur(29px);
-
-        & a {
-          position: relative;
-          width: fit-content;
-          font-family: "Raleway-Bold", Helvetica;
-          color: var(--color-gris-suave);
-          text-decoration: none;
-          font-size: 1.5rem;
-          padding: 10px 60px;
-
-          & ::hover {
-            border: 1px solid var(--color-gris-suave);
-          }
-        }
-
-        & .flecha {
-          position: relative;
-          width: 20px;
-          height: 15px;
-          transform: rotate(90deg);
-          z-index: 10;
+        & ::hover {
+          border: 1px solid var(--color-gris-suave);
         }
       }
-    }
 
-    /* Retina Display */
-    /* Móvil */
-    @media only screen and (min-width: 320px) and (max-width: 500px) and (orientation: portrait) {
-      @media (-webkit-min-device-pixel-ratio: 1) {
-        background: url(../img/smartphone/Img_fondo.webp),
-          linear-gradient(
-            0deg,
-            rgba(10, 28, 34, 0.56) 1.39%,
-            rgba(217, 217, 217, 0) 75.64%
-          );
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
+      & .flecha {
+        position: relative;
+        width: 20px;
+        height: 15px;
+        transform: rotate(90deg);
+        z-index: 10;
       }
-
-      @media (-webkit-min-device-pixel-ratio: 2) {
-        background: url(../img/smartphone/Img_fondo@2x.webp),
-          linear-gradient(
-            0deg,
-            rgba(10, 28, 34, 0.56) 1.39%,
-            rgba(217, 217, 217, 0) 75.64%
-          );
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-      }
-
-      @media (-webkit-min-device-pixel-ratio: 3) {
-        background: url(../img/smartphone/Img_fondo@3x.webp),
-          linear-gradient(
-            0deg,
-            rgba(10, 28, 34, 0.56) 1.39%,
-            rgba(217, 217, 217, 0) 75.64%
-          );
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-      }
-    }
-
-    /* Animación push up al cambiar de página */
-    .container.push-up {
-      transform: translateY(-100%);
     }
   }
 
-  /* Apartado del Contenedor de Inicio */
-  #container__inicio {
-    /* padding: 140px 0 0 0px; */
-    height: auto;
-    justify-content: space-between;
-
-    & .container__inicio-volver {
-      & :is(img) {
-        /* position: relative; */
-        width: 40px;
-        height: 25px;
-        transform: rotate(180deg);
-        margin: 60px 0;
-      }
+  /* Retina Display */
+  /* Móvil */
+  @media only screen and (min-width: 320px) and (max-width: 500px) and (orientation: portrait) {
+    @media (-webkit-min-device-pixel-ratio: 1) {
+      background: url(../img/smartphone/Img_fondo.webp),
+        linear-gradient(
+          0deg,
+          rgba(10, 28, 34, 0.56) 1.39%,
+          rgba(217, 217, 217, 0) 75.64%
+        );
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
     }
 
-    /* Apartado de las cartas */
-    /* Carta 01 */
-    .main__carta01,
-    .main__carta02,
-    .main__carta03 {
-      width: 300px;
-      height: 340px;
-      border-radius: 26px;
-      background-color: var(--color-verde-menta);
-      box-shadow: 0px 0px 15.12px 0px rgba(239, 239, 250, 0.1);
-      margin-bottom: 60px;
+    @media (-webkit-min-device-pixel-ratio: 2) {
+      background: url(../img/smartphone/Img_fondo@2x.webp),
+        linear-gradient(
+          0deg,
+          rgba(10, 28, 34, 0.56) 1.39%,
+          rgba(217, 217, 217, 0) 75.64%
+        );
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
 
-      /* Parte de la animación */
-      view-timeline: --image;
-      view-timeline-axis: block;
-      animation-timeline: --image;
-      animation-name: show;
-      animation-range: entry 20% cover 30%;
-      animation-fill-mode: both;
+    @media (-webkit-min-device-pixel-ratio: 3) {
+      background: url(../img/smartphone/Img_fondo@3x.webp),
+        linear-gradient(
+          0deg,
+          rgba(10, 28, 34, 0.56) 1.39%,
+          rgba(217, 217, 217, 0) 75.64%
+        );
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
 
-      /* Apartado de header de la carta */
-      & .main__carta01-header,
-      .main__carta02-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 20px;
+  /* Animación push up al cambiar de página */
+  .container.push-up {
+    transform: translateY(-100%);
+  }
+}
 
-        /* Parte del titulo */
-        & .main__carta01-header-tag,
-        .main__carta02-header-tag,
-        .main__carta03-header-tag {
-          background-color: var(--color-gris-claro);
-          width: fit-content;
-          padding: 0px 8px;
-          border-radius: 15px;
+/* Apartado del Contenedor de Inicio */
+#container__inicio {
+  /* padding: 140px 0 0 0px; */
+  height: auto;
+  justify-content: space-between;
 
-          &::before {
-            content: "";
-            background: url("../svg/verificado.svg") no-repeat;
-            background-size: 16px 16px;
-            vertical-align: auto;
-            border-color: var(--color-verde-claro);
+  & .container__inicio-volver {
+    & :is(img) {
+      /* position: relative; */
+      width: 40px;
+      height: 25px;
+      transform: rotate(180deg);
+      margin: 60px 0;
+    }
+  }
 
-            display: inline-block;
-            width: 16px;
-            height: 16px;
-            margin: 5px 0px 0px 0px;
-          }
-        }
-      }
+  /* Apartado de las cartas */
+  /* Carta 01 */
+  .main__carta01,
+  .main__carta02,
+  .main__carta03 {
+    width: 300px;
+    height: 340px;
+    border-radius: 26px;
+    background-color: var(--color-verde-menta);
+    box-shadow: 0px 0px 15.12px 0px rgba(239, 239, 250, 0.1);
+    margin-bottom: 60px;
 
-      /* Apartado del centro de la carta */
-      & .main__carta01-centro,
-      .main__carta02-centro,
-      .main__carta03-centro {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 40px;
+    /* Parte de la animación */
+    view-timeline: --image;
+    view-timeline-axis: block;
+    animation-timeline: --image;
+    animation-name: show;
+    animation-range: entry 20% cover 30%;
+    animation-fill-mode: both;
+
+    /* Apartado de header de la carta */
+    & .main__carta01-header,
+    .main__carta02-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+
+      /* Parte del titulo */
+      & .main__carta01-header-tag,
+      .main__carta02-header-tag,
+      .main__carta03-header-tag {
         background-color: var(--color-gris-claro);
         width: fit-content;
-        margin: auto;
-        border-radius: 50%;
-      }
+        padding: 0px 8px;
+        border-radius: 15px;
 
-      /* Parte del titulo  */
-      & .main__carta01-titulo,
-      .main__carta02-titulo,
-      .main__carta03-titulo {
-        display: flex;
-        justify-content: space-between;
-        flex-direction: column;
-        align-items: left;
-        padding: 0 20px;
+        &::before {
+          content: "";
+          background: url("../svg/verificado.svg") no-repeat;
+          background-size: 16px 16px;
+          vertical-align: auto;
+          border-color: var(--color-verde-claro);
 
-        /* Primero */
-        & h6:first-child {
-          font-size: var(--tam-h3);
-        }
-      }
-
-      /* Apartado del boton de la carta */
-      & .main__carta01-enlace,
-      .main__carta02-enlace,
-      .main__carta03-enlace {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 10px;
-
-        /* Parte del enlace */
-        & a {
-          text-decoration: none;
-          color: var(--color-azul-oscuro);
-          font-size: var(--tam-h3);
-          font-family: "Raleway03", sans-serif;
-          text-transform: uppercase;
-          background-color: var(--color-gris-suave);
-          padding: 5px 100px;
-          border-radius: 10px;
+          display: inline-block;
+          width: 16px;
+          height: 16px;
+          margin: 5px 0px 0px 0px;
         }
       }
     }
 
-    /* Carta 02 */
-    .main__carta02 {
-      background: #568392;
-
-      & .main__carta01-header-tag::before {
-        content: none;
-      }
-    }
-    /* Carta 03 */
-    .main__carta03 {
-      background: #3ea469;
-    }
-
-    /* Apartado del footer */
-    & .container__inicio-footer {
+    /* Apartado del centro de la carta */
+    & .main__carta01-centro,
+    .main__carta02-centro,
+    .main__carta03-centro {
       display: flex;
-      justify-content: space-evenly;
-      flex-direction: column;
+      justify-content: center;
       align-items: center;
-      width: 100%;
-      height: 500px;
-
-      border-top: 1px solid var(--color-gris-suave);
+      padding: 40px;
       background-color: var(--color-gris-claro);
+      width: fit-content;
+      margin: auto;
+      border-radius: 50%;
+    }
 
-      & img {
-        width: 80px;
+    /* Parte del titulo  */
+    & .main__carta01-titulo,
+    .main__carta02-titulo,
+    .main__carta03-titulo {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      align-items: left;
+      padding: 0 20px;
+
+      /* Primero */
+      & h6:first-child {
+        font-size: var(--tam-h3);
       }
+    }
 
-      .container__inicio-footer-menu {
-        list-style: none;
-        text-align: center;
-        line-height: 40px;
-      }
+    /* Apartado del boton de la carta */
+    & .main__carta01-enlace,
+    .main__carta02-enlace,
+    .main__carta03-enlace {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 10px;
 
-      .container__inicio-footer-redes {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        width: 100%;
-        padding: 0 100px;
-
-        & img {
-          width: 30px;
-        }
+      /* Parte del enlace */
+      & a {
+        text-decoration: none;
+        color: var(--color-azul-oscuro);
+        font-size: var(--tam-h3);
+        font-family: "Raleway03", sans-serif;
+        text-transform: uppercase;
+        background-color: var(--color-gris-suave);
+        padding: 5px 100px;
+        border-radius: 10px;
       }
     }
   }
 
-  /* Apartado de la pagina ejercicio_01 */
+  /* Carta 02 */
+  .main__carta02 {
+    background: #568392;
+
+    & .main__carta01-header-tag::before {
+      content: none;
+    }
+  }
+  /* Carta 03 */
+  .main__carta03 {
+    background: #3ea469;
+  }
+
+  /* Apartado del footer */
+  & .container__inicio-footer {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 500px;
+
+    border-top: 1px solid var(--color-gris-suave);
+    background-color: var(--color-gris-claro);
+
+    & img {
+      width: 80px;
+    }
+
+    .container__inicio-footer-menu {
+      list-style: none;
+      text-align: center;
+      line-height: 40px;
+    }
+
+    .container__inicio-footer-redes {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      width: 100%;
+      padding: 0 100px;
+
+      & img {
+        width: 30px;
+      }
+    }
+  }
+}
+
+/* Apartado de la pagina ejercicio_01 */
+#container__ejercicio01 {
+  .outer-circle {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background-color: var(--color-verde-menta);
+    position: relative;
+  }
+
+  .inner-circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: var(--color-azul-oscuro);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .inner__inner-circule {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: var(--color-azul-claro);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
