@@ -34,6 +34,7 @@
   --color-verde-claro: #98fb98;
 
   /* Tamaños Fuente */
+  --tam-titulo: 2.5em;
   --tam-h1: 1.8em;
   --tam-h2: 1.4em;
   --tam-h3: 1.2em;
@@ -122,12 +123,18 @@ html {
   background: var(--color-azul-oscuro);
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 /* Estilos genericos */
 #container,
 #container__inicio,
 #container__ejercicio01,
 #container__crono01 {
-  width: max(320px, 100%);
+  width: clamp(320px, 1200px);
   height: 100dvh;
   display: flex;
   flex-direction: column;
@@ -535,9 +542,14 @@ html {
       transform: rotate(180deg);
       margin: 60px 0;
     }
+
+    & h1 {
+      text-align: center;
+      font-size: var(--tam-titulo);
+    }
   }
   /* Apartado del circulo central */
-  .container__ejercicio01-grafico-circulo-externo {
+  .container__crono01-grafico-circulo-externo {
     width: 300px;
     height: 300px;
     margin: 100px 0;
@@ -545,12 +557,11 @@ html {
     background-color: var(--color-verde-semioscuro);
     box-shadow: 0px 0px 60px 0px rgba(239, 239, 250, 0.15);
     position: relative;
-
     /* Animacion */
     animation: pulse 8s ease infinite;
     animation-delay: 5s;
 
-    .container__ejercicio01-grafico-circulo-externo02 {
+    .container__crono01-grafico-circulo-externo02 {
       width: 250px;
       height: 250px;
       border-radius: 50%;
@@ -560,7 +571,7 @@ html {
       left: 50%;
       transform: translate(-50%, -50%);
 
-      .container__ejercicio01-grafico-circulo-externo03 {
+      .container__crono01-grafico-circulo-externo03 {
         width: 200px;
         height: 200px;
         border-radius: 50%;
@@ -570,7 +581,7 @@ html {
         left: 50%;
         transform: translate(-50%, -50%);
 
-        .container__ejercicio01-grafico-circulo-centro {
+        .container__crono01-grafico-circulo-centro {
           width: 150px;
           height: 150px;
           border-radius: 50%;
@@ -579,7 +590,6 @@ html {
           top: 50%;
           left: 50%;
           transform: translate(-50%, -50%);
-
           display: flex;
           justify-content: center;
           align-items: center;
@@ -601,13 +611,25 @@ html {
             animation: inhaleAnimation 8s infinite;
             animation-delay: 5s;
           }
-
           .exhale {
             animation: exhaleAnimation 8s infinite 2s;
-            animation-delay: 5s;
+            animation-delay: 6s;
           }
         }
       }
+    }
+  }
+
+  /* Apartado del boton de para */
+  & .container__crono01-parar {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    background: var(--color-gris-claro);
+    padding: 15px 20px;
+    border-radius: 15px;
+
+    & :is(img) {
     }
   }
 }
