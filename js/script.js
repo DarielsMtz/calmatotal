@@ -67,16 +67,11 @@ document
 
     // Obtener todas las animaciones en la página
     const animaciones = document.getAnimations();
-    const time = document.getAttribute("time");
 
     // Detener cada animación
     animaciones.forEach(function (animacion) {
       animacion.pause();
     });
-    // Detener el intervalo
-    time.forEach(function (time) {
-      time.pause();
-    });
 
-    setInterval((window.location.href = "ejercicio01.html"), 2000);
+    window.location.href = "ejercicio01.html";
   });
