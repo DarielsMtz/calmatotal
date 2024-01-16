@@ -62,17 +62,55 @@
 
 /* Animacion de pulso */
 @keyframes pulse {
-  0% {
+  0%,
+  100% {
     transform: scale(1);
   }
   50% {
     transform: scale(1.2);
   }
+}
+
+/* Animación para las palabras */
+@keyframes fadeInOut {
+  0%,
   100% {
-    transform: scale(1);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
   }
 }
 
+@keyframes inhaleAnimation {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0;
+  }
+}
+
+@keyframes exhaleAnimation {
+  0%,
+  25% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  75%,
+  100% {
+    opacity: 0;
+  }
+}
 /* *********************************** */
 /* *** ESTILOS GENERALES *** */
 /* *********************************** */
@@ -89,8 +127,8 @@ html {
 #container__inicio,
 #container__ejercicio01,
 #container__crono01 {
-  width: max-width(320px, 100%);
-  height: 100vh;
+  width: max(320px, 100%);
+  height: 100dvh;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -397,7 +435,7 @@ html {
     box-shadow: 0px 0px 60px 0px rgba(239, 239, 250, 0.15);
     position: relative;
     /* Animacion */
-    animation: pulse 5s infinite ease-in-out;
+    /* animation: pulse 5s infinite ease-in-out; */
 
     .container__ejercicio01-grafico-circulo-externo02 {
       width: 250px;
@@ -488,4 +526,88 @@ html {
 }
 
 #container__crono01 {
+  justify-content: space-between;
+  /* Felcha de retorno */
+  & .container__crono01-volver {
+    & :is(img) {
+      width: 40px;
+      height: 25px;
+      transform: rotate(180deg);
+      margin: 60px 0;
+    }
+  }
+  /* Apartado del circulo central */
+  .container__ejercicio01-grafico-circulo-externo {
+    width: 300px;
+    height: 300px;
+    margin: 100px 0;
+    border-radius: 50%;
+    background-color: var(--color-verde-semioscuro);
+    box-shadow: 0px 0px 60px 0px rgba(239, 239, 250, 0.15);
+    position: relative;
+
+    /* Animacion */
+    animation: pulse 8s ease infinite;
+    animation-delay: 5s;
+
+    .container__ejercicio01-grafico-circulo-externo02 {
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      background-color: #153847;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      .container__ejercicio01-grafico-circulo-externo03 {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background-color: #184053;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        .container__ejercicio01-grafico-circulo-centro {
+          width: 150px;
+          height: 150px;
+          border-radius: 50%;
+          background-color: #1c475f;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: var(--tam-h1);
+          text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.42);
+
+          .inhale,
+          .exhale {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 24px;
+            opacity: 0;
+          }
+
+          /* Aplicar animación a las palabras */
+          .inhale {
+            animation: inhaleAnimation 8s infinite;
+            animation-delay: 5s;
+          }
+
+          .exhale {
+            animation: exhaleAnimation 8s infinite 2s;
+            animation-delay: 5s;
+          }
+        }
+      }
+    }
+  }
 }

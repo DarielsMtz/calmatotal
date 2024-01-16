@@ -1,19 +1,36 @@
-function updateTime() {
-  // CApturamos la fecha actual del seistema
-  let fecha_actual = new Date();
+// Establecer un retraso de 5 segundos antes de iniciar la cuenta regresiva
+setTimeout(function () {
+  // Establecer el tiempo inicial en segundos
+  let tiempoRestante = 5 * 60; // 5 minutos en segundos
 
-  // Separamos de la fecha las horas, los minutos y los segundos
-  // No aseguramos de tener siempre dos digitos (00:00:00)
-  let horas = fecha_actual.getHours().toString().padStart(2, "0");
-  let minutos = fecha_actual.getMinutes().toString().padStart(2, "0");
-  let secondos = fecha_actual.getSeconds().toString().padStart(2, "0 ");
+  // Función para actualizar el tiempo en el elemento h1
+  function actualizarTiempo() {
+    // Calcular minutos y segundos restantes
+    const minutos = Math.floor(tiempoRestante / 60);
+    const segundos = tiempoRestante % 60;
 
-  // Creamos una plantilla literal con los datos
-  let tiempo = `${horas}:${minutos}:${secondos}`;
+    // Formatear los minutos y segundos con ceros a la izquierda si es necesario
+    const minutosFormateados = minutos < 10 ? "0" + minutos : minutos;
+    const segundosFormateados = segundos < 10 ? "0" + segundos : segundos;
 
-  // Actualizamos el texto del elemento DIV
-  document.getElementById("time").textContent = tiempo;
-}
+    // Actualizar el contenido del elemento h1
+    document.getElementById(
+      "time"
+    ).textContent = `${minutosFormateados}:${segundosFormateados} min`;
 
-// Llamamos a la función updateTime() cada segundo
-setInterval(updateTime, 1000);
+    // Disminuir el tiempo restante
+    tiempoRestante--;
+
+    // Detener la cuenta regresiva cuando el tiempo llega a cero
+    if (tiempoRestante < 0) {
+      clearInterval(intervalo);
+      document.getElementById("time").textContent = "Tiempo agotado";
+    }
+  }
+
+  // Llamar a la función inicialmente para mostrar el tiempo inicial
+  actualizarTiempo();
+
+  // Establecer un intervalo para llamar a la función cada segundo
+  const intervalo = setInterval(actualizarTiempo, 1000);
+}, 5000); // 5000 milisegundos = 5 segundos
