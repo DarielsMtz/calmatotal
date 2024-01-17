@@ -118,7 +118,7 @@
 
 html {
   font-family: "Raleway", sans-serif;
-  font-size: 1rem;
+  font-size: var(--tam-h4);
   color: var(--color-gris-suave);
   background: var(--color-azul-oscuro);
 }
@@ -134,8 +134,8 @@ body {
 #container__inicio,
 #container__ejercicio01,
 #container__crono01 {
-  width: clamp(320px, 1200px);
-  height: 100dvh;
+  width: max(320px, 100%);
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -419,11 +419,14 @@ body {
 }
 
 /* Apartado de la pagina ejercicio_01 */
-#container__ejercicio01 {
+#container__ejercicio01,
+#container__ejercicio02,
+#container__ejercicio03 {
   justify-content: normal;
 
   /* Felcha de retorno */
-  & .container__ejercicio01-volver {
+  .container__ejercicio01-volver,
+  .container__ejercicio02-volver {
     & :is(img) {
       width: 40px;
       height: 25px;
@@ -433,7 +436,8 @@ body {
   }
 
   /* Apartado del circulo central */
-  .container__ejercicio01-grafico-circulo-externo {
+  .container__ejercicio01-grafico-circulo-externo,
+  .container__ejercicio02-grafico-circulo-externo {
     width: 300px;
     height: 300px;
     margin: 100px 0;
@@ -444,7 +448,8 @@ body {
     /* Animacion */
     /* animation: pulse 5s infinite ease-in-out; */
 
-    .container__ejercicio01-grafico-circulo-externo02 {
+    .container__ejercicio01-grafico-circulo-externo02,
+    .container__ejercicio02-grafico-circulo-externo02 {
       width: 250px;
       height: 250px;
       border-radius: 50%;
@@ -454,7 +459,8 @@ body {
       left: 50%;
       transform: translate(-50%, -50%);
 
-      .container__ejercicio01-grafico-circulo-externo03 {
+      .container__ejercicio01-grafico-circulo-externo03,
+      .container__ejercicio02-grafico-circulo-externo03 {
         width: 200px;
         height: 200px;
         border-radius: 50%;
@@ -464,7 +470,8 @@ body {
         left: 50%;
         transform: translate(-50%, -50%);
 
-        .container__ejercicio01-grafico-circulo-centro {
+        .container__ejercicio01-grafico-circulo-centro,
+        .container__ejercicio02-grafico-circulo-centro {
           width: 150px;
           height: 150px;
           border-radius: 50%;
@@ -490,7 +497,8 @@ body {
     }
   }
 
-  .container__ejercicio01-mas {
+  .container__ejercicio01-mas,
+  .container__ejercicio02-mas {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -506,7 +514,8 @@ body {
     }
   }
 
-  .container__ejercicio01-info {
+  .container__ejercicio01-info,
+  .container__ejercicio02-info {
     width: 350px;
     height: auto;
     padding: 50px 0;
@@ -532,8 +541,10 @@ body {
   }
 }
 
+/* Apartado de la pagina del cronometro - ejercicio_01 */
 #container__crono01 {
   justify-content: space-between;
+  height: 100dvh;
   /* Felcha de retorno */
   & .container__crono01-volver {
     & :is(img) {
