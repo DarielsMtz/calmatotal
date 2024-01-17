@@ -21,7 +21,7 @@
     url("../font/Raleway-Bold.woff") format("woff");
 }
 
-/* Variables */
+/* Variables globales */
 :root {
   /* Colores */
   --color-azul-claro: #add8e6;
@@ -44,12 +44,7 @@
   --tam-p: 1em;
 }
 
-/* Fondo */
-:root {
-  --fondo-diseno: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='430' height='930' preserveAspectRatio='none' viewBox='0 0 430 930'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1105%26quot%3b)' fill='none'%3e%3cuse xlink:href='%23SvgjsSymbol1112' x='0' y='0'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsSymbol1112' x='0' y='720'%3e%3c/use%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1105'%3e%3crect width='430' height='930' fill='white'%3e%3c/rect%3e%3c/mask%3e%3cpath d='M-1 0 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0z' id='SvgjsPath1107'%3e%3c/path%3e%3cpath d='M-3 0 a3 3 0 1 0 6 0 a3 3 0 1 0 -6 0z' id='SvgjsPath1108'%3e%3c/path%3e%3cpath d='M-5 0 a5 5 0 1 0 10 0 a5 5 0 1 0 -10 0z' id='SvgjsPath1110'%3e%3c/path%3e%3cpath d='M2 -2 L-2 2z' id='SvgjsPath1109'%3e%3c/path%3e%3cpath d='M6 -6 L-6 6z' id='SvgjsPath1106'%3e%3c/path%3e%3cpath d='M30 -30 L-30 30z' id='SvgjsPath1111'%3e%3c/path%3e%3c/defs%3e%3csymbol id='SvgjsSymbol1112'%3e%3cuse xlink:href='%23SvgjsPath1106' x='30' y='30' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1107' x='30' y='90' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1108' x='30' y='150' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1108' x='30' y='210' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1107' x='30' y='270' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1108' x='30' y='330' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1106' x='30' y='390' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1108' x='30' y='450' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1109' x='30' y='510' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1109' x='30' y='570' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1107' x='30' y='630' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1108' x='30' y='690' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1108' x='90' y='30' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1106' x='90' y='90' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1106' x='90' y='150' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1109' x='90' y='210' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1106' x='90' y='270' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1110' x='90' y='330' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1106' x='90' y='390' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1107' x='90' y='450' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1106' x='90' y='510' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1110' x='90' y='570' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1108' x='90' y='630' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1106' x='90' y='690' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1111' x='150' y='30' stroke='%231c538e' stroke-width='3'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1109' x='150' y='90' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1108' x='150' y='150' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1109' x='150' y='210' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1108' x='150' y='270' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1109' x='150' y='330' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1111' x='150' y='390' stroke='%231c538e' stroke-width='3'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1109' x='150' y='450' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1108' x='150' y='510' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1110' x='150' y='570' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1106' x='150' y='630' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1106' x='150' y='690' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1110' x='210' y='30' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1106' x='210' y='90' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1110' x='210' y='150' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1106' x='210' y='210' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1110' x='210' y='270' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1106' x='210' y='330' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1106' x='210' y='390' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1110' x='210' y='450' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1106' x='210' y='510' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1106' x='210' y='570' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1111' x='210' y='630' stroke='%231c538e' stroke-width='3'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1110' x='210' y='690' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1110' x='270' y='30' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1109' x='270' y='90' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1106' x='270' y='150' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1108' x='270' y='210' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1110' x='270' y='270' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1106' x='270' y='330' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1110' x='270' y='390' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1110' x='270' y='450' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1107' x='270' y='510' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1107' x='270' y='570' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1106' x='270' y='630' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1109' x='270' y='690' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1109' x='330' y='30' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1109' x='330' y='90' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1110' x='330' y='150' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1106' x='330' y='210' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1111' x='330' y='270' stroke='%231c538e' stroke-width='3'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1106' x='330' y='330' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1110' x='330' y='390' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1110' x='330' y='450' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1110' x='330' y='510' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1108' x='330' y='570' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1110' x='330' y='630' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1111' x='330' y='690' stroke='%231c538e' stroke-width='3'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1108' x='390' y='30' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1107' x='390' y='90' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1110' x='390' y='150' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1106' x='390' y='210' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1106' x='390' y='270' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1110' x='390' y='330' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1109' x='390' y='390' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1108' x='390' y='450' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1110' x='390' y='510' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1111' x='390' y='570' stroke='%231c538e' stroke-width='3'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1106' x='390' y='630' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1106' x='390' y='690' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1107' x='450' y='30' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1109' x='450' y='90' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1111' x='450' y='150' stroke='%231c538e' stroke-width='3'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1110' x='450' y='210' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1106' x='450' y='270' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1110' x='450' y='330' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1110' x='450' y='390' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1110' x='450' y='450' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1107' x='450' y='510' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1108' x='450' y='570' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1108' x='450' y='630' stroke='%231c538e'%3e%3c/use%3e%3cuse xlink:href='%23SvgjsPath1110' x='450' y='690' stroke='%231c538e'%3e%3c/use%3e%3c/symbol%3e%3c/svg%3e");
-}
-
-/* Animacion */
+/* Animacion de vista */
 @keyframes show {
   from {
     opacity: 0;
@@ -83,6 +78,7 @@
   }
 }
 
+/* Animacion para la palabra inhalar */
 @keyframes inhaleAnimation {
   0%,
   100% {
@@ -99,6 +95,7 @@
   }
 }
 
+/* Animacion para la palabra exhalar */
 @keyframes exhaleAnimation {
   0%,
   25% {
@@ -121,6 +118,7 @@ html {
   color: var(--color-gris-suave);
   background: var(--color-azul-oscuro);
 
+  /* Atributos del cuerpo de la paginas */
   & body {
     display: flex;
     flex-direction: column;
@@ -129,7 +127,7 @@ html {
   }
 }
 
-/* Estilos genericos */
+/* Estilos genericos de cada pagina */
 #container,
 #container__inicio,
 #container__ejercicio01,
@@ -137,7 +135,7 @@ html {
 #container__ejercicio03,
 #container__crono01 {
   width: max(320px, 100%);
-  height: 100vh;
+  height: 100dvh;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -149,12 +147,12 @@ html {
   /* Contenido */
   & .main__portada {
     display: flex;
-
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 80px;
 
+    /* Apartado del logo principal */
     & .main__portada__img {
       width: 25%;
       filter: drop-shadow(0px 0px 15px #0a1c22);
@@ -194,6 +192,7 @@ html {
         }
       }
 
+      /* Apartado del icono flecha */
       & .flecha {
         position: relative;
         width: 20px;
@@ -243,22 +242,20 @@ html {
       background-size: cover;
     }
   }
-
-  /* Animación push up al cambiar de página */
-  .container.push-up {
-    transform: translateY(-100%);
-  }
 }
 
 /* Apartado del Contenedor de Inicio */
 #container__inicio {
-  /* padding: 140px 0 0 0px; */
   height: auto;
   justify-content: space-between;
 
+  & main {
+    padding: 40px 0px;
+  }
+
+  /* Apartado del icono volver */
   & .container__inicio-volver {
     & :is(img) {
-      /* position: relative; */
       width: 40px;
       height: 25px;
       transform: rotate(180deg);
@@ -266,7 +263,7 @@ html {
     }
   }
 
-  /* Apartado de las cartas */
+  /*--- Apartado de las cartas --- */
   /* Carta 01 */
   .main__carta01,
   .main__carta02,
@@ -276,7 +273,7 @@ html {
     border-radius: 26px;
     background-color: var(--color-verde-menta);
     box-shadow: 0px 0px 15.12px 0px rgba(239, 239, 250, 0.1);
-    margin-bottom: 60px;
+    margin-bottom: 80px;
 
     /* Parte de la animación */
     view-timeline: --image;
@@ -284,6 +281,9 @@ html {
     animation-timeline: --image;
     animation-name: show;
     animation-range: entry 20% cover 30%;
+    -webkit-animation-name: show;
+    -webkit-animation-range: entry 20% cover 30%;
+    -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
 
     /* Apartado de header de la carta */
@@ -303,13 +303,13 @@ html {
         padding: 0px 8px;
         border-radius: 15px;
 
+        /* Contenido del titulo temp */
         &::before {
           content: "";
           background: url("../svg/verificado.svg") no-repeat;
           background-size: 16px 16px;
           vertical-align: auto;
           border-color: var(--color-verde-claro);
-
           display: inline-block;
           width: 16px;
           height: 16px;
@@ -374,11 +374,8 @@ html {
   /* Carta 02 */
   .main__carta02 {
     background: #568392;
-
-    & .main__carta01-header-tag::before {
-      content: none;
-    }
   }
+
   /* Carta 03 */
   .main__carta03 {
     background: #3ea469;
@@ -401,16 +398,19 @@ html {
       width: 500px;
       height: 500px;
 
+      /* Apartado del logo */
       & img {
         width: 80px;
       }
 
+      /* Apartado de los enlaces */
       .container__inicio-footer-menu {
         list-style: none;
         text-align: center;
         line-height: 40px;
       }
 
+      /* Apartado de las redes sociales */
       .container__inicio-footer-redes {
         display: flex;
         justify-content: space-around;
@@ -426,7 +426,6 @@ html {
   }
 }
 
-/* ----------------------------------- */
 /* Apartado de la pagina ejercicio_01 */
 #container__ejercicio01,
 #container__ejercicio02,
@@ -457,9 +456,8 @@ html {
       background-color: var(--color-verde-semioscuro);
       box-shadow: 0px 0px 60px 0px rgba(239, 239, 250, 0.15);
       position: relative;
-      /* Animacion */
-      /* animation: pulse 5s infinite ease-in-out; */
 
+      /* Apartado del circulo externo02 */
       .container__ejercicio01-grafico-circulo-externo02,
       .container__ejercicio02-grafico-circulo-externo02 {
         width: 250px;
@@ -471,6 +469,7 @@ html {
         left: 50%;
         transform: translate(-50%, -50%);
 
+        /* Apartado del circulo externo03 */
         .container__ejercicio01-grafico-circulo-externo03,
         .container__ejercicio02-grafico-circulo-externo03 {
           width: 200px;
@@ -482,6 +481,7 @@ html {
           left: 50%;
           transform: translate(-50%, -50%);
 
+          /* Apartado del circulo centro */
           .container__ejercicio01-grafico-circulo-centro,
           .container__ejercicio02-grafico-circulo-centro {
             width: 150px;
@@ -492,13 +492,13 @@ html {
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-
             display: flex;
             justify-content: center;
             align-items: center;
             font-size: var(--tam-h1);
             text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.42);
 
+            /* Apartado del tecto central */
             & :is(a) {
               text-decoration: none;
               color: var(--color-gris-suave);
@@ -555,12 +555,12 @@ html {
     }
   }
 }
-/* ---------------------------------- */
 
 /* Apartado de la pagina del cronometro - ejercicio_01 */
 #container__crono01 {
   justify-content: space-between;
   height: 100dvh;
+
   /* Felcha de retorno */
   & .container__crono01-volver {
     & :is(img) {
@@ -588,6 +588,7 @@ html {
     animation: pulse 8s ease infinite;
     animation-delay: 5s;
 
+    /* Apartado del circulo externo02 */
     .container__crono01-grafico-circulo-externo02 {
       width: 250px;
       height: 250px;
@@ -598,6 +599,7 @@ html {
       left: 50%;
       transform: translate(-50%, -50%);
 
+      /* Apartado del circulo externo03 */
       .container__crono01-grafico-circulo-externo03 {
         width: 200px;
         height: 200px;
@@ -608,6 +610,7 @@ html {
         left: 50%;
         transform: translate(-50%, -50%);
 
+        /* Apartado del circulo centro */
         .container__crono01-grafico-circulo-centro {
           width: 150px;
           height: 150px;
@@ -623,6 +626,7 @@ html {
           font-size: var(--tam-h1);
           text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.42);
 
+          /* Apartado del texto central */
           .inhale,
           .exhale {
             position: absolute;
@@ -638,6 +642,7 @@ html {
             animation: inhaleAnimation 8s infinite;
             animation-delay: 5s;
           }
+
           .exhale {
             animation: exhaleAnimation 8s infinite 2s;
             animation-delay: 6s;
@@ -658,62 +663,28 @@ html {
   }
 }
 
-/* ----------------------------------- */
+/* Apartado de la pagina ejercicio_02 */
 #container__ejercicio02 {
+  /* Apartado del grafico del circulo */
   .container__ejercicio02-grafico {
+    /* Apartado del circulo externo */
     .container__ejercicio02-grafico-circulo-externo {
-      width: 300px;
-      height: 300px;
-      margin: 100px 0;
-      border-radius: 50%;
       background-color: var(--color-verde-semioscuro);
-      box-shadow: 0px 0px 60px 0px rgba(239, 239, 250, 0.15);
-      position: relative;
-      /* Animacion */
-      /* animation: pulse 5s infinite ease-in-out; */
 
+      /* Apartado del circulo externo02 */
       .container__ejercicio02-grafico-circulo-externo02 {
-        width: 250px;
-        height: 250px;
-        border-radius: 50%;
         background-color: #153847;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
 
+        /* Apartado del circulo externo03 */
         .container__ejercicio02-grafico-circulo-externo03 {
-          width: 200px;
-          height: 200px;
-          border-radius: 50%;
           background-color: #184053;
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
 
+          /* Apartado del circulo centro */
           .container__ejercicio02-grafico-circulo-centro {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
             background-color: #1c475f;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: var(--tam-h1);
-            text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.42);
-
-            & :is(a) {
-            }
           }
         }
       }
     }
   }
 }
-/* ----------------------------------- */
