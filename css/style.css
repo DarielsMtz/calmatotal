@@ -115,24 +115,26 @@
 /* *********************************** */
 /* *** ESTILOS GENERALES *** */
 /* *********************************** */
-
 html {
   font-family: "Raleway", sans-serif;
   font-size: var(--tam-h4);
   color: var(--color-gris-suave);
   background: var(--color-azul-oscuro);
+
+  & body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
-body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
 /* Estilos genericos */
 #container,
 #container__inicio,
 #container__ejercicio01,
+#container__ejercicio02,
+#container__ejercicio03,
 #container__crono01 {
   width: max(320px, 100%);
   height: 100vh;
@@ -383,41 +385,48 @@ body {
   }
 
   /* Apartado del footer */
-  & .container__inicio-footer {
+  footer {
     display: flex;
-    justify-content: space-evenly;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
     width: 100%;
-    height: 500px;
-
     border-top: 1px solid var(--color-gris-suave);
     background-color: var(--color-gris-claro);
 
-    & img {
-      width: 80px;
-    }
-
-    .container__inicio-footer-menu {
-      list-style: none;
-      text-align: center;
-      line-height: 40px;
-    }
-
-    .container__inicio-footer-redes {
+    & .container__inicio-footer {
       display: flex;
-      justify-content: space-around;
+      justify-content: space-evenly;
+      flex-direction: column;
       align-items: center;
-      width: 100%;
-      padding: 0 100px;
+      width: 500px;
+      height: 500px;
 
       & img {
-        width: 30px;
+        width: 80px;
+      }
+
+      .container__inicio-footer-menu {
+        list-style: none;
+        text-align: center;
+        line-height: 40px;
+      }
+
+      .container__inicio-footer-redes {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        padding: 0 100px;
+
+        & img {
+          width: 30px;
+        }
       }
     }
   }
 }
 
+/* ----------------------------------- */
 /* Apartado de la pagina ejercicio_01 */
 #container__ejercicio01,
 #container__ejercicio02,
@@ -426,7 +435,8 @@ body {
 
   /* Felcha de retorno */
   .container__ejercicio01-volver,
-  .container__ejercicio02-volver {
+  .container__ejercicio02-volver,
+  .container__ejercicio03-volver {
     & :is(img) {
       width: 40px;
       height: 25px;
@@ -436,67 +446,71 @@ body {
   }
 
   /* Apartado del circulo central */
-  .container__ejercicio01-grafico-circulo-externo,
-  .container__ejercicio02-grafico-circulo-externo {
-    width: 300px;
-    height: 300px;
-    margin: 100px 0;
-    border-radius: 50%;
-    background-color: var(--color-verde-semioscuro);
-    box-shadow: 0px 0px 60px 0px rgba(239, 239, 250, 0.15);
-    position: relative;
-    /* Animacion */
-    /* animation: pulse 5s infinite ease-in-out; */
-
-    .container__ejercicio01-grafico-circulo-externo02,
-    .container__ejercicio02-grafico-circulo-externo02 {
-      width: 250px;
-      height: 250px;
+  .container__ejercicio01-grafico,
+  .container__ejercicio02-grafico {
+    .container__ejercicio01-grafico-circulo-externo,
+    .container__ejercicio02-grafico-circulo-externo {
+      width: 300px;
+      height: 300px;
+      margin: 100px 0;
       border-radius: 50%;
-      background-color: #153847;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+      background-color: var(--color-verde-semioscuro);
+      box-shadow: 0px 0px 60px 0px rgba(239, 239, 250, 0.15);
+      position: relative;
+      /* Animacion */
+      /* animation: pulse 5s infinite ease-in-out; */
 
-      .container__ejercicio01-grafico-circulo-externo03,
-      .container__ejercicio02-grafico-circulo-externo03 {
-        width: 200px;
-        height: 200px;
+      .container__ejercicio01-grafico-circulo-externo02,
+      .container__ejercicio02-grafico-circulo-externo02 {
+        width: 250px;
+        height: 250px;
         border-radius: 50%;
-        background-color: #184053;
+        background-color: #153847;
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
 
-        .container__ejercicio01-grafico-circulo-centro,
-        .container__ejercicio02-grafico-circulo-centro {
-          width: 150px;
-          height: 150px;
+        .container__ejercicio01-grafico-circulo-externo03,
+        .container__ejercicio02-grafico-circulo-externo03 {
+          width: 200px;
+          height: 200px;
           border-radius: 50%;
-          background-color: #1c475f;
+          background-color: #184053;
           position: absolute;
           top: 50%;
           left: 50%;
           transform: translate(-50%, -50%);
 
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          font-size: var(--tam-h1);
-          text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.42);
+          .container__ejercicio01-grafico-circulo-centro,
+          .container__ejercicio02-grafico-circulo-centro {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background-color: #1c475f;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
 
-          & :is(a) {
-            text-decoration: none;
-            color: var(--color-gris-suave);
-            font-size: var(--tam-h2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: var(--tam-h1);
+            text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.42);
+
+            & :is(a) {
+              text-decoration: none;
+              color: var(--color-gris-suave);
+              font-size: var(--tam-h2);
+            }
           }
         }
       }
     }
   }
 
+  /* Apartado de ver mas informacion */
   .container__ejercicio01-mas,
   .container__ejercicio02-mas {
     width: 100%;
@@ -514,6 +528,7 @@ body {
     }
   }
 
+  /* Apartado de la informacio */
   .container__ejercicio01-info,
   .container__ejercicio02-info {
     width: 350px;
@@ -540,6 +555,7 @@ body {
     }
   }
 }
+/* ---------------------------------- */
 
 /* Apartado de la pagina del cronometro - ejercicio_01 */
 #container__crono01 {
@@ -639,8 +655,65 @@ body {
     background: var(--color-gris-claro);
     padding: 15px 20px;
     border-radius: 15px;
+  }
+}
 
-    & :is(img) {
+/* ----------------------------------- */
+#container__ejercicio02 {
+  .container__ejercicio02-grafico {
+    .container__ejercicio02-grafico-circulo-externo {
+      width: 300px;
+      height: 300px;
+      margin: 100px 0;
+      border-radius: 50%;
+      background-color: var(--color-verde-semioscuro);
+      box-shadow: 0px 0px 60px 0px rgba(239, 239, 250, 0.15);
+      position: relative;
+      /* Animacion */
+      /* animation: pulse 5s infinite ease-in-out; */
+
+      .container__ejercicio02-grafico-circulo-externo02 {
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+        background-color: #153847;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        .container__ejercicio02-grafico-circulo-externo03 {
+          width: 200px;
+          height: 200px;
+          border-radius: 50%;
+          background-color: #184053;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+
+          .container__ejercicio02-grafico-circulo-centro {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background-color: #1c475f;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: var(--tam-h1);
+            text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.42);
+
+            & :is(a) {
+            }
+          }
+        }
+      }
     }
   }
 }
+/* ----------------------------------- */
